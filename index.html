@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Menu Test</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1 style="color: white;">Logo</h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="menu">
+                <a onclick="menuOpen()" style="cursor: pointer;"><img src="menu.svg" width="30px"></a>
+            </div>
+        </div>
+    </header>
+    <div class="active-side-menu menuSlide" id="side-menu">
+        <div class="side-menu">
+            <a onclick="menuClose()" style="cursor: pointer;"><img src="menu.svg" width="30px"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    function menuOpen(){
+        let open = document.getElementById('side-menu')
+        open.style='display: block;'
+    }
+
+    function menuClose(){
+        let close = document.getElementById('side-menu')
+        // console.log("masuk")
+        close.style = 'display: none; '
+    }
+</script>
+</html>
